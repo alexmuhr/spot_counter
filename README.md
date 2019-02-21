@@ -2,8 +2,10 @@
 This is a program that is designed to identify, count, and classify spots in an image. Intended usage is to classify material defects apparent in an image. Program outputs a histogram of spot count by area, an image that is a resized version of the original with spots circled, and an excel summary report. The summary report is also displayed in the GUI textbox.
 
 spot_counter.py defines the frontend GUI
+
 spot_counter_backend.py defines the backend function that loads the image, identifies spots, and creates outputs. This must be in the same directory as spot_counter.py
-spot_counter.exe is an executable that combines both spot_counter.py and spot_counter_backend.py 
+
+To compile this program into an executable using pyinstaller you will need to add a hook file for skimage.io to the pyinstaller directory in your python installation.
 
 Spots should be dark on a light background, however some simple modification of the backend function could change the program to pick out light spots on a dark background instead.
 
